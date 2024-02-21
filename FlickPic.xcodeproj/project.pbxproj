@@ -22,6 +22,7 @@
 		5E0FCE042B8426AC0098D443 /* PhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FCE032B8426AC0098D443 /* PhotoTests.swift */; };
 		5E0FCE072B8429E40098D443 /* PhotoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FCE062B8429E40098D443 /* PhotoListTests.swift */; };
 		5E0FCE0A2B84412A0098D443 /* FlickrResultFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FCE092B84412A0098D443 /* FlickrResultFixture.swift */; };
+		5E6B4FC72B868C300010E877 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B4FC62B868C300010E877 /* DescriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		5E0FCE062B8429E40098D443 /* PhotoListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListTests.swift; sourceTree = "<group>"; };
 		5E0FCE092B84412A0098D443 /* FlickrResultFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrResultFixture.swift; sourceTree = "<group>"; };
 		5E0FCE0C2B855C430098D443 /* FlickPic.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FlickPic.xctestplan; sourceTree = "<group>"; };
+		5E6B4FC62B868C300010E877 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				5E0FCDF42B84232B0098D443 /* FlickPicView.swift */,
 				5E0FCDF62B8423560098D443 /* DetailView.swift */,
+				5E6B4FC62B868C300010E877 /* DescriptionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				5E0FCDFA2B8423750098D443 /* DateUtilities.swift in Sources */,
 				5E0FCDFC2B8423920098D443 /* Photo_Fixtures.swift in Sources */,
 				5E0FCDED2B8422870098D443 /* Photo.swift in Sources */,
+				5E6B4FC72B868C300010E877 /* DescriptionView.swift in Sources */,
 				5E0FCDF22B8422FE0098D443 /* PhotoList.swift in Sources */,
 				5E0FCDEF2B8422A30098D443 /* FlickrResult.swift in Sources */,
 				5E0FCDF72B8423560098D443 /* DetailView.swift in Sources */,

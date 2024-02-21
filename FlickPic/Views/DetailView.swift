@@ -11,6 +11,8 @@ import WebKit
 struct DetailView: View {
     let photo: Photo
     
+    @State var shouldPresentSheet = false
+    
     var body: some View {
         VStack(spacing: 20) {
             Text(photo.title)
@@ -18,16 +20,20 @@ struct DetailView: View {
                 .multilineTextAlignment(.center)
                 .font(.title)
             
-            AsyncImage(url: photo.photoURL)
+            HeadlineImage(url: photo.photoURL)
             NameValueLabel(name: "Author:", value: photo.author)
             NameValueLabel(name: "Date Published:", value: "\(photo.datePublishedString)")
-            Divider()
-            Color.clear
-                .overlay() {
-                    WebView(html: photo.description)
-                }
+            Button() {
+                shouldPresentSheet.toggle()
+            } label: {
+                Text("See detailed description")
+            }
         }
         .padding()
+        .sheet(isPresented: $shouldPresentSheet) {
+        } content: {
+            DescriptionView(photo: photo)
+        }
     }
 }
 
@@ -41,12 +47,12 @@ struct HeadlineImage: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: 250, maxHeight: 250)
         } placeholder: {
-            RoundedRectangle(cornerRadius: 10)
+            Rectangle()
                 .fill(.gray)
                 .frame(maxWidth: 250, maxHeight: 250)
         }
         .transaction { transaction in
-            transaction.animation = .spring()
+            transaction.animation = .easeInOut(duration: 0.25)
         }
     }
 }
@@ -62,19 +68,6 @@ struct NameValueLabel: View {
             Text(value)
                 .multilineTextAlignment(.center)
         }
-    }
-}
-
-struct WebView: UIViewRepresentable {
-    let html: String
-    
-    func makeUIView(context: Context) -> WKWebView  {
-        let webView = WKWebView()
-        webView.loadHTMLString(html, baseURL: nil)
-        return webView
-    }
-    
-    func updateUIView(_ uiView: WKWebView, context: Context) {
     }
 }
 
