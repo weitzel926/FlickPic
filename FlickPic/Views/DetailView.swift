@@ -21,7 +21,10 @@ struct DetailView: View {
                 .font(.title)
             
             HeadlineImage(url: photo.photoURL)
-            NameValueLabel(name: "Author:", value: photo.author)
+            Text("Author:")
+                .fontWeight(.bold)
+            Text(photo.author)
+                .multilineTextAlignment(.center)
             NameValueLabel(name: "Date Published:", value: "\(photo.datePublishedString)")
             Button() {
                 shouldPresentSheet.toggle()
