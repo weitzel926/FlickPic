@@ -2,7 +2,7 @@
 
 ![image](https://github.com/weitzel926/FlickPic/assets/3514194/75e50148-9611-4d0f-a40c-67cb516cc0c2)
 
-FlickPick is a sample SwiftUI app meant as a light demonstration of SwiftUI skills.  It is a continuation of a text home interview I was given.  This uses a Flickr API to query the last twenty or so images tagged with a given string and displays them in a "photo picker" grid.  When the customer taps on a photo, a detail page appears with the image and some details about the image.  Please consider this a work in progress. 
+FlickPick is a sample SwiftUI app meant as a light demonstration of SwiftUI skills.  It is a continuation of a take home interview I was given.  This uses a Flickr API to query the last twenty or so images tagged with a given string and displays them in a "photo picker" grid.  When the customer taps on a photo, a detail page appears with the image and some details about the image.  Please consider this a work in progress. 
 
 Things to note:
 
