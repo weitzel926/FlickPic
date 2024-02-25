@@ -23,7 +23,7 @@ struct FlickPicView: View {
                         photoList.loadPhotos(key: searchTerm)
                     }
                 ZStack {
-                    PhotoGridView(photos: photoList.photos)
+                    PhotoGridView(photoList: photoList)
                     StyledProgressView()
                         .opacity(photoList.inProgress ? 1 : 0)
                 }
@@ -64,7 +64,7 @@ struct StyledProgressView: View {
 }
 
 struct PhotoGridView: View {
-    let photos: [Photo]
+    let photoList: PhotoList
     
     let columns = [
         GridItem(.adaptive(minimum: 100, maximum: 120))
@@ -73,9 +73,9 @@ struct PhotoGridView: View {
     var body: some View {
         ScrollView(.vertical) {
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(photos, id: \.self) { photo in
+                ForEach(photoList.photos, id: \.self) { photo in
                     NavigationLink {
-                        DetailView(photo: photo)
+                        DetailView(photoList: photoList)
                     } label: {
                         AsyncImageCell(url: photo.photoURL)
                     }

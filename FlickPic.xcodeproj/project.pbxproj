@@ -23,6 +23,8 @@
 		5E0FCE072B8429E40098D443 /* PhotoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FCE062B8429E40098D443 /* PhotoListTests.swift */; };
 		5E0FCE0A2B84412A0098D443 /* FlickrResultFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FCE092B84412A0098D443 /* FlickrResultFixture.swift */; };
 		5E6B4FC72B868C300010E877 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B4FC62B868C300010E877 /* DescriptionView.swift */; };
+		5E6B50132B87FC100010E877 /* AddFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B50122B87FC100010E877 /* AddFavoriteView.swift */; };
+		5E6B50162B87FEC20010E877 /* HeadlineImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B50152B87FEC20010E877 /* HeadlineImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		5E0FCE092B84412A0098D443 /* FlickrResultFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrResultFixture.swift; sourceTree = "<group>"; };
 		5E0FCE0C2B855C430098D443 /* FlickPic.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FlickPic.xctestplan; sourceTree = "<group>"; };
 		5E6B4FC62B868C300010E877 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		5E6B50122B87FC100010E877 /* AddFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteView.swift; sourceTree = "<group>"; };
+		5E6B50152B87FEC20010E877 /* HeadlineImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		5E0FCDC02B8422540098D443 /* FlickPic */ = {
 			isa = PBXGroup;
 			children = (
+				5E6B50142B87FEB40010E877 /* Controls */,
 				5E0FCDF82B84236B0098D443 /* Utilities */,
 				5E0FCDF32B8423180098D443 /* Views */,
 				5E0FCDF02B8422EE0098D443 /* View Models */,
@@ -176,6 +181,7 @@
 				5E0FCDF42B84232B0098D443 /* FlickPicView.swift */,
 				5E0FCDF62B8423560098D443 /* DetailView.swift */,
 				5E6B4FC62B868C300010E877 /* DescriptionView.swift */,
+				5E6B50122B87FC100010E877 /* AddFavoriteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +224,14 @@
 				5E0FCE092B84412A0098D443 /* FlickrResultFixture.swift */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		5E6B50142B87FEB40010E877 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				5E6B50152B87FEC20010E877 /* HeadlineImage.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,8 +372,10 @@
 				5E6B4FC72B868C300010E877 /* DescriptionView.swift in Sources */,
 				5E0FCDF22B8422FE0098D443 /* PhotoList.swift in Sources */,
 				5E0FCDEF2B8422A30098D443 /* FlickrResult.swift in Sources */,
+				5E6B50132B87FC100010E877 /* AddFavoriteView.swift in Sources */,
 				5E0FCDF72B8423560098D443 /* DetailView.swift in Sources */,
 				5E0FCDC22B8422540098D443 /* FlickPicApp.swift in Sources */,
+				5E6B50162B87FEC20010E877 /* HeadlineImage.swift in Sources */,
 				5E0FCDF52B84232B0098D443 /* FlickPicView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

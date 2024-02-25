@@ -44,8 +44,11 @@ protocol Flickrable {
 class PhotoList {
     var photos: [Photo] = []
     var task: Task<Void, Never>? = nil
-    var showError: Bool = false  // Why can't this be private(set)
+    var showError: Bool = false
     var lastError: String? = nil
+    
+    // WDW SPIKE
+    private(set) var selectedPhoto: Photo? = nil
     
     private(set) var inProgress: Bool = false
     private(set) var manager: Flickrable
@@ -93,7 +96,15 @@ class PhotoList {
                 lastError = error.localizedDescription
                 return
             }
-            
         }
+    }
+    
+    func setSelectedPhoto(photo: Photo) {
+        selectedPhoto = photo
+    }
+
+    func setFavoriteDetailsForSelectedPhoto(comment: String, rating: Int) {
+        selectedPhoto?.favoriteDetails.comment = comment
+        selectedPhoto?.favoriteDetails.rating = rating
     }
 }

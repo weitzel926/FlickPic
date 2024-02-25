@@ -9,19 +9,20 @@ import SwiftUI
 import WebKit
 
 struct DescriptionView: View {
-    let photo: Photo
+    let photoList: PhotoList
     
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
-            
-           
-            Text(photo.title)
-                .font(.largeTitle)
-                .multilineTextAlignment(.center)
-                .lineLimit(2)
-            WebView(html: photo.description)
+            // TODO: Handle this better
+            if let photo = photoList.selectedPhoto {
+                Text(photo.title)
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                WebView(html: photo.description)
+            }
         }
         .safeAreaInset(edge: .top, alignment: .trailing) {
             Button(action: {
@@ -49,14 +50,14 @@ struct WebView: UIViewRepresentable {
     }
 }
 
-#Preview {
-    guard let link = URL(string: "https://picsum.photos/300/200"),
-          let mediaLink = URL(string: "https://picsum.photos/300/200"),
-          let datePublished = Date.createDate(month: 12, day: 25, year: 2023) else {
-        fatalError("Could not create URLs, should never happen")
-    }
-    
-    let photo = Photo.fixture(link: link, mediaLink: mediaLink, datePublished: datePublished)
-    
-    return DescriptionView(photo: photo)
-}
+//#Preview {
+//    guard let link = URL(string: "https://picsum.photos/300/200"),
+//          let mediaLink = URL(string: "https://picsum.photos/300/200"),
+//          let datePublished = Date.createDate(month: 12, day: 25, year: 2023) else {
+//        fatalError("Could not create URLs, should never happen")
+//    }
+//    
+//    let photo = Photo.fixture(link: link, mediaLink: mediaLink, datePublished: datePublished)
+//    
+//    return DescriptionView(photoList: photoList)
+//}

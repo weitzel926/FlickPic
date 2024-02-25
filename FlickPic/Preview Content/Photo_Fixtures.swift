@@ -18,6 +18,14 @@ extension Photo {
                      description: description,
                      published: datePublished,
                      author: "wade weitzel",
-                     tags: "test")
+                     tags: "test",
+                     favoriteDetails: Photo.FavoriteDetails.fixture()
+        )
+    }
+}
+
+extension Photo.FavoriteDetails {
+    static func fixture() -> Photo.FavoriteDetails {
+        return Photo.FavoriteDetails(comment: "This is a test comment", rating: 4)
     }
 }
