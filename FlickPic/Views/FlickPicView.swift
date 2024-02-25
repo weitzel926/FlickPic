@@ -75,7 +75,7 @@ struct PhotoGridView: View {
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(photoList.photos, id: \.self) { photo in
                     NavigationLink {
-                        DetailView(photoList: photoList)
+                        DetailView(photoList: photoList, selectedPhoto: photo)
                     } label: {
                         AsyncImageCell(url: photo.photoURL)
                     }

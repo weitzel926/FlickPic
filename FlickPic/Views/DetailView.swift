@@ -10,6 +10,8 @@ import WebKit
 
 struct DetailView: View {
     let photoList: PhotoList
+    // TODO: Is this the smoothest way to set this?
+    let selectedPhoto: Photo
     
     @State var shouldPresentSheet = false
     
@@ -44,6 +46,9 @@ struct DetailView: View {
         } content: {
             // TODO: Consider injecting the model instead
             DescriptionView(photoList: photoList)
+        }
+        .onAppear() {
+            photoList.setSelectedPhoto(photo: selectedPhoto)
         }
     }
 }
